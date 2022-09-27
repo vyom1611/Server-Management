@@ -1,10 +1,15 @@
 package com.example.servermanagement.model;
 
 import lombok.*;
+import org.hibernate.Hibernate;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
+
+import java.util.Objects;
 
 import static javax.persistence.GenerationType.AUTO;
 
@@ -27,4 +32,8 @@ public class Server {
     private String type;
     private String imgUrl;
     private Status status;
+
+    public String getName() {
+        return this.serverName;
+    }
 }
