@@ -11,8 +11,10 @@ public interface ServerController {
     @PostMapping
     Server create(Server server);
 
+    @GetMapping
     Server ping(String ip_address) throws IOException;
 
+    @GetMapping
     Collection<Server> list(int limit);
 
     @GetMapping
