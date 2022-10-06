@@ -1,29 +1,72 @@
 package com.example.servermanagement.controllers;
 
+import com.example.servermanagement.model.ApiResponse;
 import com.example.servermanagement.model.Server;
+import com.example.servermanagement.model.Status;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.io.IOException;
-import java.util.Collection;
+import java.util.Map;
+
+import static java.time.LocalDateTime.now;
+import static javax.security.auth.callback.ConfirmationCallback.OK;
+import static org.springframework.http.HttpStatus.*;
 
 @RestController
-public interface ServerController {
-    @PostMapping
-    Server create(Server server);
+@RequestMapping("/server")
+@RequiredArgsConstructor
+public class ServerController {
+    private final ServiceMapper serviceServer;
 
-    @GetMapping
-    Server ping(String ip_address) throws IOException;
+    @GetMapping("/list")
+    public ResponseEntity<ApiResponse> getServers() {
+        return ResponseEntity.ok(
+                ApiResponse.builder()
+                        .timeStamp(now())
+                        .data(Map.of("servers", serviceServer.list(30)))
+                        .message("servers retrieve")
+                        .statusCode(OK)
+                        .build()
+        );
+    }
 
-    @GetMapping
-    Collection<Server> list(int limit);
+    @GetMapping("/ping/{ipAddress}")
+    public ResponseEntity<ApiResponse> pingServer(@PathVariable("ipAddress") String ipAddress) throws IOException {
+        Server server = serviceServer.ping(ipAddress);
+        return ResponseEntity.ok(
+                ApiResponse.builder()
+                        .timeStamp(now())
+                        .data(Map.of("server", server))
+                        .message(server.getStatus() == Status.SERVER_UP ? "Ping success" : "Ping failed")
+                        .statusCode(OK)
+                        .build()
+        );
+    }
 
-    @GetMapping
-    Server get(Long id);
+    @PostMapping("/save")
+    public ResponseEntity<ApiResponse> saveServer(@RequestBody @Valid Server server) {
+        return ResponseEntity.ok(
+                ApiResponse.builder()
+                        .timeStamp(now())
+                        .data(Map.of("server", serviceServer.create(server)))
+                        .message("Server created")
+                        .statusCode(CREATED.value())
+                        .build()
+        );
+    }
 
-    @PutMapping
-    Server update(Server server);
-
-    @DeleteMapping
-    Boolean delete(Long id);
-
+    @GetMapping("/get/{id}")
+    public ResponseEntity<ApiResponse> getServer(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(
+                ApiResponse.builder()
+                        .timeStamp(now())
+                        .data(Map.of("server", serviceServer.get(id)))
+                        .message("Server obtained")
+                        .statusCode(OK)
+                        .build()
+        );
+    }
 }

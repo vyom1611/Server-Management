@@ -31,7 +31,6 @@ public class ServerService implements ServiceMapper {
         return serverRepository.save(server);
     }
 
-
     @Override
     public Server ping(String ip_address) throws IOException {
         System.out.printf("Pinging server IP: %s", ip_address);
