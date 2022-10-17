@@ -6,6 +6,7 @@ import com.example.servermanagement.model.Server;
 import com.example.servermanagement.model.Status;
 import com.example.servermanagement.repository.ServerRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -20,6 +21,7 @@ import java.util.Random;
 @RequiredArgsConstructor
 @Service
 @Transactional
+@Slf4j
 public class ServerService implements ServiceMapper {
 
     private final ServerRepository serverRepository;

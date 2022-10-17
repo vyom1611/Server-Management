@@ -14,12 +14,12 @@ import static javax.persistence.GenerationType.AUTO;
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 public class Server {
     @Id
     @GeneratedValue(strategy = AUTO)
-    private long id;
+    private Long id;
     @Column(unique = true)
     @NotEmpty(message = "ip address should not be empty")
     private String ip_address;
