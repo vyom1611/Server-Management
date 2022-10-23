@@ -36,7 +36,7 @@ public class ServerService implements ServiceMapper {
     @Override
     public Server ping(String ip_address) throws IOException {
         System.out.printf("Pinging server IP: %s", ip_address);
-        Server server = serverRepository.findByIp_address(ip_address);
+        Server server = serverRepository.findByIpAddress(ip_address);
         InetAddress address = InetAddress.getByName(ip_address);
         server.setStatus(address.isReachable(10000) ? Status.SERVER_UP : Status.SERVER_DOWN);
         serverRepository.save(server);

@@ -3,7 +3,9 @@ package com.example.servermanagement.controllers;
 import com.example.servermanagement.model.ApiResponse;
 import com.example.servermanagement.model.Server;
 import com.example.servermanagement.model.Status;
+import com.example.servermanagement.services.ServerService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +14,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import static java.time.LocalDateTime.now;
 import static javax.security.auth.callback.ConfirmationCallback.OK;
@@ -22,7 +25,7 @@ import static org.springframework.http.MediaType.IMAGE_PNG_VALUE;
 @RequestMapping("/servers")
 @RequiredArgsConstructor
 public class ServerController {
-    private final ServiceMapper serviceServer;
+    private final ServerService serviceServer;
 
     @GetMapping("/list")
     public ResponseEntity<ApiResponse> getServers() {
@@ -30,7 +33,7 @@ public class ServerController {
                 ApiResponse.builder()
                         .timeStamp(now())
                         .data(Map.of("servers", serviceServer.list(30)))
-                        .message("servers retrieve")
+                        .message("Servers retrieved")
                         .statusCode(OK)
                         .build()
         );
