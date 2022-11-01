@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dc8b4955-7a6b-4cdd-bcef-04165c6548ef" name="Changes" comment="backend completed">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/servermanagement/ServerManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/servermanagement/ServerManagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/servermanagement/controllers/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/servermanagement/controllers/ServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/servermanagement/controllers/ServiceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/servermanagement/controllers/ServiceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/servermanagement/model/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/servermanagement/model/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/servermanagement/model/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/servermanagement/model/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/servermanagement/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/servermanagement/model/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/servermanagement/repository/ServerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/servermanagement/repository/ServerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/servermanagement/services/ServerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/servermanagement/services/ServerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/servermanagement/ServerManagementApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/example/servermanagement/ServerManagementApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2FKPkEiAVL1k4ympIiE1a1zNb48" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelOrder2&quot;: &quot;2&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth2&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;58acb0639a1c3368dc7454a876d47fdc&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="HTTP Request.ServerManagement-endpoints | #1">
+    <configuration name="ServerManagement-endpoints | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/ServerManagement-endpoints.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="ServerManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ServerManagement" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.servermanagement.ServerManagementApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.ServerManagement-endpoints | #1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.21189591" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc8b4955-7a6b-4cdd-bcef-04165c6548ef" name="Changes" comment="" />
+      <created>1664237947230</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664237947230</updated>
+      <workItem from="1664237948865" duration="5317000" />
+      <workItem from="1664343105081" duration="1033000" />
+      <workItem from="1664393740572" duration="111000" />
+      <workItem from="1664394166341" duration="1485000" />
+      <workItem from="1664494534859" duration="643000" />
+      <workItem from="1664680094773" duration="7079000" />
+      <workItem from="1664927196239" duration="6857000" />
+      <workItem from="1665018838165" duration="3167000" />
+      <workItem from="1665170817074" duration="1297000" />
+      <workItem from="1665524295875" duration="2733000" />
+      <workItem from="1665698081461" duration="11754000" />
+      <workItem from="1666557075320" duration="2956000" />
+      <workItem from="1666639744327" duration="1355000" />
+      <workItem from="1666907604742" duration="653000" />
+      <workItem from="1667182905440" duration="106000" />
+      <workItem from="1667183020543" duration="85000" />
+      <workItem from="1667183385547" duration="4448000" />
+      <workItem from="1667271965162" duration="191000" />
+    </task>
+    <task id="LOCAL-00001" summary="Init">
+      <created>1664238028704</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664238028704</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Server Repository and schema defined">
+      <created>1664239307907</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664239307907</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Server Repository and schema defined">
+      <created>1664239493502</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664239493502</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Server controller and service implemented for create and ping functions">
+      <created>1664251495942</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664251495942</updated>
+    </task>
+    <task id="LOCAL-00005" summary="More CRUD operation services added">
+      <created>1664697550099</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664697550099</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Server Controller and API response build">
+      <created>1664698756911</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664698756911</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Http response builds">
+      <created>1665020190558</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665020190558</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Http response builds #2">
+      <created>1665604210522</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665604210522</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Testing endpoints">
+      <created>1666042723970</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666042723970</updated>
+    </task>
+    <task id="LOCAL-00010" summary="backend completed">
+      <created>1666558225460</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1666558225460</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init" />
+    <MESSAGE value="Server Repository and schema defined" />
+    <MESSAGE value="Server controller and service implemented for create and ping functions" />
+    <MESSAGE value="More CRUD operation services added" />
+    <MESSAGE value="Server Controller and API response build" />
+    <MESSAGE value="Http response builds" />
+    <MESSAGE value="Http response builds #2" />
+    <MESSAGE value="Testing endpoints" />
+    <MESSAGE value="backend completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend completed" />
+  </component>
+</project>
