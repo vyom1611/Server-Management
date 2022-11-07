@@ -1,4 +1,4 @@
-import {EStatus} from "../enum/status.enum";
+import {EStatus} from "../enums/status.enum";
 
 export interface Server {
   id: number;
