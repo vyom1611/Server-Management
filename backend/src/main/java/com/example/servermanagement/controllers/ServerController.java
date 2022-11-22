@@ -33,7 +33,7 @@ public class ServerController {
                 ApiResponse.builder()
                         .timeStamp(now())
                         .data(Map.of("servers", serviceServer.list(30)))
-                        .message("Servers retrieved")
+                        .message("Servers jretrieved")
                         .statusCode(OK)
                         .build()
         );
