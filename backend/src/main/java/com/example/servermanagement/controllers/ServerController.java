@@ -5,7 +5,6 @@ import com.example.servermanagement.model.Server;
 import com.example.servermanagement.model.Status;
 import com.example.servermanagement.services.ServerService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,7 +29,7 @@ public class ServerController {
     @CrossOrigin(origins = "http://localhost:8080/servers/list")
     @GetMapping("/list")
     public ResponseEntity<ApiResponse> getServers() throws InterruptedException {
-        TimeUnit.SECONDS.sleep(4);
+        TimeUnit.SECONDS.sleep(2);
         return ResponseEntity.ok(
                 ApiResponse.builder()
                         .timeStamp(now())

@@ -1,12 +1,11 @@
 package com.example.servermanagement.controllers;
 
 import com.example.servermanagement.model.Server;
-import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.Collection;
 
-public interface ServiceMapper {
+public interface IServerService {
     Server create(Server server);
 
     Server ping(String ip_address) throws IOException;

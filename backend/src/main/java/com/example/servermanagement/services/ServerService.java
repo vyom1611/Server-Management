@@ -1,7 +1,7 @@
 package com.example.servermanagement.services;
 
 
-import com.example.servermanagement.controllers.ServiceMapper;
+import com.example.servermanagement.controllers.IServerService;
 import com.example.servermanagement.model.Server;
 import com.example.servermanagement.model.Status;
 import com.example.servermanagement.repository.ServerRepository;
@@ -22,7 +22,7 @@ import java.util.Random;
 @Service
 @Transactional
 @Slf4j
-public class ServerService implements ServiceMapper {
+public class ServerService implements IServerService {
 
     private final ServerRepository serverRepository;
 
