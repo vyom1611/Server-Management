@@ -5,6 +5,7 @@ import com.example.servermanagement.model.Server;
 import com.example.servermanagement.model.Status;
 import com.example.servermanagement.services.ServerService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +25,7 @@ import static org.springframework.http.MediaType.IMAGE_PNG_VALUE;
 @RequestMapping("/servers")
 @RequiredArgsConstructor
 public class ServerController {
+
     private final ServerService serviceServer;
 
     @CrossOrigin(origins = "http://localhost:8080/servers/list")

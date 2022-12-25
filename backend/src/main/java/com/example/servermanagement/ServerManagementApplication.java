@@ -1,15 +1,18 @@
 package com.example.servermanagement;
 
+import com.example.servermanagement.config.RSAKeyProperties;
 import com.example.servermanagement.model.Server;
 import com.example.servermanagement.model.Status;
 import com.example.servermanagement.repository.ServerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+@EnableConfigurationProperties(RSAKeyProperties.class)
 @SpringBootApplication
 public class ServerManagementApplication {
 
