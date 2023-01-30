@@ -27,15 +27,6 @@ public class ServerManagementApplication {
             serverRepo.save(new Server(null, "192.168.1.108", "Windows machine", "6 GB", "Work Laptop", "http://localhost:5432/servers/image/server2.png", Status.SERVER_DOWN));
             serverRepo.save(new Server(null, "192.168.1.152", "Mac machine", "16 GB", "School Laptop", "http://localhost:5432/servers/image/server3.png", Status.SERVER_UP));
         };
-    }
 
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurer() {
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/servers/list").allowedOrigins("http://localhost:8080", "http://localhost:4200");
-            }
-        };
     }
 }
