@@ -28,7 +28,6 @@ public class ServerController {
 
     private final ServerService serviceServer;
 
-    @CrossOrigin(origins = "http://localhost:8080/servers/list")
     @GetMapping("/list")
     public ResponseEntity<ApiResponse> getServers() throws InterruptedException {
         TimeUnit.SECONDS.sleep(2);
@@ -42,7 +41,6 @@ public class ServerController {
         );
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/ping/{ipAddress}")
     public ResponseEntity<ApiResponse> pingServer(@PathVariable("ipAddress") String ipAddress) throws IOException {
         Server server = serviceServer.ping(ipAddress);
@@ -56,7 +54,6 @@ public class ServerController {
         );
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     @PostMapping("/save")
     public ResponseEntity<ApiResponse> saveServer(@RequestBody @Valid Server server) {
         return ResponseEntity.ok(
@@ -69,7 +66,6 @@ public class ServerController {
         );
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/get/{id}")
     public ResponseEntity<ApiResponse> getServer(@PathVariable("id") Long id) {
         return ResponseEntity.ok(
@@ -82,7 +78,6 @@ public class ServerController {
         );
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<ApiResponse> deleteServer(@PathVariable("id") Long id) {
         return ResponseEntity.ok(
@@ -95,7 +90,6 @@ public class ServerController {
         );
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping(path="/image/{fileName}", produces = IMAGE_PNG_VALUE)
     public byte[] getServerImage(@PathVariable("fileName") String fileName) throws IOException {
         return Files.readAllBytes(Paths.get(System.getProperty("user.home") + "Downloads/images/" + fileName));
