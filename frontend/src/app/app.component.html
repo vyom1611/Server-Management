@@ -1,38 +1,99 @@
 
-<div class="table-wrapper">
-  <ng-container class="table-responsive" *ngIf="(appState$ | async) as appState" [ngSwitch]="appState.dataState">
-    <ng-container *ngSwitchCase="appState.dataState === 'LOADED_STATE'">
-      <table mat-table>
-        <thead class="table-title">
-          <tr mat-header-row *matHeaderRowDef="columnsToDisplay">
-            <th>Image</th>
-            <th>IP Address</th>
-            <th>Name</th>
-            <th>Memory</th>
-            <th>Type</th>
-            <th>Status</th>
-            <th>Ping</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let server of appState.appData.data.servers; let i = index">
-        <tr>
-          <td> <img [src]="server.imgUrl" [alt]="server.serverName" width="40" height="40"></td>
-          <td>{{ server.ipAddress }}</td>
-          <td>{{ server.serverName }}</td>
-          <td>{{ server.memory }}</td>
-          <td>{{ server.type }}</td>
-          <td>
-            <span class="badge" [ngClass]="[server.status === 'SERVER_UP' ? ' badge-success' : ' badge-danger']">
-              {{ server.status === 'SERVER_UP' ? 'SERVER UP' : 'SERVER DOWN' }}
-            </span>
-          </td>
-        </tbody>
-      </table>
-    </ng-container>
-    <ng-container *ngSwitchCase="appState.dataState === 'ERROR_STATE'">
+<!--<div class="table-wrapper">-->
+<!--  <ng-container class="table-responsive" *ngIf="(appState$ | async) as appState" [ngSwitch]="appState.dataState">-->
+<!--    <ng-container *ngSwitchCase="appState.dataState === 'LOADED_STATE'">-->
+<!--      <table mat-table>-->
+<!--        <thead class="table-title">-->
+<!--          <tr mat-header-row>-->
+<!--            <th>Image</th>-->
+<!--            <th>IP Address</th>-->
+<!--            <th>Name</th>-->
+<!--            <th>Memory</th>-->
+<!--            <th>Type</th>-->
+<!--            <th>Status</th>-->
+<!--            <th>Ping</th>-->
+<!--            <th>Actions</th>-->
+<!--          </tr>-->
+<!--        </thead>-->
+<!--        <tbody *ngFor="let server of appState.appData.data.servers; let i = index">-->
+<!--        <tr>-->
+<!--          <td> <img [src]="server.imgUrl" [alt]="server.serverName" width="40" height="40"></td>-->
+<!--          <td>{{ server.ipAddress }}</td>-->
+<!--          <td>{{ server.serverName }}</td>-->
+<!--          <td>{{ server.memory }}</td>-->
+<!--          <td>{{ server.type }}</td>-->
+<!--          <td>-->
+<!--            <span class="badge" [ngClass]="[server.status === 'SERVER_UP' ? ' badge-success' : ' badge-danger']">-->
+<!--              {{ server.status === 'SERVER_UP' ? 'SERVER UP' : 'SERVER DOWN' }}-->
+<!--            </span>-->
+<!--          </td>-->
+<!--        </tbody>-->
+<!--      </table>-->
+<!--    </ng-container>-->
+<!--    <ng-container *ngSwitchCase="appState.dataState === 'ERROR_STATE'">-->
 
 
-    </ng-container>
-  </ng-container>
+<!--    </ng-container>-->
+<!--  </ng-container>-->
+<!--</div>-->
+
+<div class="container-xl">
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-6">
+            <h2>Manage Servers</h2>
+          </div>
+          <div class="col-sm-6">
+            <a href="#addServerModal" class="btn btn-success" data-toggle="modal">
+              <i class="material-icons">&#xE147;</i>
+              <span>New Server</span>
+            </a>
+          </div>
+        </div>
+      </div> <br>
+      <ng-container *ngIf="(appState$ | async) as appState" [ngSwitch]="appState.dataState">
+        <ng-container *ngSwitchCase="DataState.LOADING_STATE">
+          <div class="col-md-12 single-note-item text-center">
+            <div class="spinner-border text-info" role="status"></div>
+          </div>
+        </ng-container>
+        <ng-container *ngSwitchCase="DataState.LOADED_STATE">
+          <table class="table table-striped table-hover" id="servers">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>IP Address</th>
+                <th>Memory</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Ping</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let server of appState.appData.data.servers; let i = index" >
+            <tr>
+              <td> <img [src]="server.imgUrl" [alt]="server.serverName" width="40" height="40"></td>
+              <td>{{ server.serverName }}</td>
+              <td>{{ server.ipAddress }}</td>
+              <td>{{ server.memory }}</td>
+              <td>{{ server.type }}</td>
+              <td>
+                <span class="badge" [ngClass]="[server.status === Status.SERVER_UP ? ' badge-success' : ' badge-danger']">
+                  {{ server.status === Status.SERVER_UP ? 'SERVER UP' : 'SERVER DOWN' }}
+                </span>
+              </td>
+            </tbody>
+          </table>
+        </ng-container>
+        <ng-container *ngSwitchCase="DataState.ERROR_STATE">
+          <div class="alert-danger">
+            {{ appState.error }}
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
 </div>
