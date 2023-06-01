@@ -1,4 +1,4 @@
-package com.example.servermanagement.controllers;
+package com.example.servermanagement.services;
 
 import com.example.servermanagement.model.Server;
 import org.springframework.web.bind.annotation.*;
